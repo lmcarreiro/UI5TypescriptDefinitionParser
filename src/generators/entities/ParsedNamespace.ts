@@ -63,7 +63,7 @@ export class ParsedNamespace extends GeneratorBase {
             nscontent += "declare namespace " + this.name + " {\n";
             for(const method of this.methods) {
                 nscontent += this.addTabs(this.makeComment(method.description), 1) + "\n";
-                nscontent += this.addTabs("export function" + method.toString(true), 1) + "\n";
+                nscontent += this.addTabs("export function " + method.toString(true), 1) + "\n";
             }
             nscontent += "}\n";
             return nscontent;
